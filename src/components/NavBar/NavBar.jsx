@@ -7,7 +7,7 @@ const NavBar = () => {
             <Navbar bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand href="#home">
-                        LM
+                        LateralMood
                         {/* <img
                         src="/logo.svg"
                         width="30"
