@@ -1,20 +1,22 @@
 import { useState } from 'react'
-import logo from './LOG.png'
+
 import './App.css'
 import NavBar from './components/NavBar/NavBar';
 import ItemsListContainer from './components/ItemsListConatiner/ItemsListContainer';
-
+import ItemCount from './components/ItemCount';
 
 function App() {
   
+  const inicial = 1
+  const max = 10
 
   return (
     <div className="App">
       <NavBar />
-      <ItemsListContainer greting="hola soy itemlistc"/>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
+      <ItemsListContainer greeting="Indumentaria Personalizada"/>
+      <ItemCount inicial = {inicial} max = {max}/>
+
+      
     </div>
   )
 }
