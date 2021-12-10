@@ -12,13 +12,16 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />
+      <header>
+        <NavBar />
+      </header>
+      
       <ItemsListContainer greeting="Indumentaria Personalizada"/>
       <ItemCount inicial = {inicial} max = {max}/>
 
       
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
