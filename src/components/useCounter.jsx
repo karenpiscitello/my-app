@@ -20,7 +20,9 @@ export const useCounter = (initialState) => {
     }
 
     const carrito = () => {  
-        alert('agregaste ' + counter + ' productos al carrito')
+        //alert('agregaste ' + counter + ' productos al carrito')
+        const message = `Agregaste al carrito ${counter} producto`;
+        counter === 1? alert(message) : alert(`${message}s`);
     }
 
     return {
