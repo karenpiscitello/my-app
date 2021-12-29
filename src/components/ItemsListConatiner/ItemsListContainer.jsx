@@ -1,39 +1,28 @@
-import React from "react"
-import { useState, useEffect} from "react"
-import { getFetch } from "../helpers/getFetch"
-import ItemList from "../ItemList/ItemList"
+import { useState, useEffect } from "react";
+// import axios from "axios";
+import ItemList from "../ItemList/ItemList";
+
+import getProducts from "../services/handMadePromise";
+
+const ItemListContainer = ({ greeting }) => {
+  const [products, setProducts] = useState([]);
+  console.log(products);
 
 
 
-function ItemsListContainer( {greeting} ) {
-    
-    const [productos , setProductos] = useState ([])
-    const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    getProducts
+      .then((res) => setProducts(res))
+      .catch((err) => alert("Ha ocurrido un error", err));
+  });
 
-    useEffect(()=> {
-        getFetch
-        .then(dataRes => setProductos(dataRes))
-        .catch( err => console.log(err))
-        .finally(() => setLoading(false))
-    }, [])
-    
-    function handlerClick(){
-        setBool(!bool)
-    }
-
-        
-
-    return(
-        <div>
-        { greeting }
-        { loading ? 
-        <h2>Cargando...</h2> : 
-        
-            <ItemList productos={productos}/>
-        }
-        
-        </div>
-    )
-}
-
-export default ItemsListContainer
+  return (
+    <div className="container col-12 bg-warning">
+      <h3>{greeting}</h3>
+      <h1>About</h1>
+      
+      <ItemList products={products} />
+    </div>
+  );
+};
+export default ItemListContainer;

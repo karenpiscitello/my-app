@@ -4,6 +4,7 @@ import './App.css'
 import NavBar from './components/NavBar/NavBar';
 import ItemsListContainer from './components/ItemsListConatiner/ItemsListContainer';
 import ItemCount from './components/ItemCount';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
   
@@ -18,7 +19,7 @@ function App() {
       
       <ItemsListContainer greeting="Indumentaria Personalizada"/>
       <ItemCount inicial = {inicial} max = {max}/>
-
+      <ItemDetailContainer/>
       
     </div>
   );

@@ -12,7 +12,7 @@ function Item({producto}) {
             </div>
             <div className="card-body">
                 <img src={producto.imagen} alt='' className='w-50' />
-                {producto.stock}                                                            
+                {producto.stock}                                                           
             </div>
             <div className="card-footer">  
             
