@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import getOneProduct from "../services/getOneProduct";
+import getOneProduct from "../../services/getOneProduct";
 import ItemDetail from "../ItemDetail/ItemDetail";
 
 const ItemDetailContainer = () => {

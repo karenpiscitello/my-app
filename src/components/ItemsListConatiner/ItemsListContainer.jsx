@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-// import axios from "axios";
 import ItemList from "../ItemList/ItemList";
 
-import getProducts from "../services/handMadePromise";
+
 
 const ItemListContainer = ({ greeting }) => {
   const [products, setProducts] = useState([]);
