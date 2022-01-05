@@ -1,11 +1,11 @@
 const oneProduct = {
     id: 1,
     image:
-    "https://images-na.ssl-images-amazon.com/images/I/616VM20%2BAzL.__AC_SY300_SX300_QL70_ML2_.jpg",
-    title: "Ryzen 5900x",
-    descripcion: "este es el primer producto",
-    categoria: "Procesadores",
-    price: "73000",
+    "https://res.cloudinary.com/karenp/image/upload/v1641391344/productos/reme2_vf0dap.png",
+    title: "Remera Lady Gaga",
+    descripcion: "remera personalizada",
+    categoria: "Remeras",
+    price: "2000",
     stock: "4",
 };
 

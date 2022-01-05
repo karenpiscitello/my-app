@@ -1,8 +1,7 @@
 [
-
     {
         "id":1,
-        "image":"https://images-na.ssl-images-amazon.com/images/I/616VM20%2BAzL.__AC_SY300_SX300_QL70_ML2_.jpg",
+        "image":"https://res.cloudinary.com/karenp/image/upload/v1641391344/productos/reme2_vf0dap.png",
         "title":"Remera Lady Gaga",
         "descripcion": "remera personalizada",
         "categoria":"Remeras",
@@ -11,7 +10,7 @@
     },
     {
         "id":2,
-        "image":"https://i.blogs.es/588c7d/amd6/original.jpeg",
+        "image":"https://res.cloudinary.com/karenp/image/upload/v1641391343/productos/REME1_zgh25o.png",
         "title":"Remera Harley Queen",
         "descripcion": "remera personalizada",
         "categoria":"Remeras",
@@ -20,7 +19,7 @@
     },
     {
         "id":3,
-        "image":"https://http2.mlstatic.com/D_NQ_NP_884972-MLA40182457265_122019-O.jpg",
+        "image":"https://res.cloudinary.com/karenp/image/upload/v1641391344/productos/reme3_xxn7za.png",
         "title":"Remera Dragon Ball",
         "descripcion": "remera personalizada",
         "categoria":"Remeras",
