@@ -1,12 +1,10 @@
 import { useState, useEffect } from "react";
-import ItemList from "../ItemList/ItemList";
-
+import ItemList from "./ItemList";
 
 
 const ItemListContainer = ({ greeting }) => {
   const [products, setProducts] = useState([]);
   console.log(products);
-
 
 
   useEffect(() => {
@@ -19,8 +17,8 @@ const ItemListContainer = ({ greeting }) => {
     <div className="container col-12 bg-warning">
       <h3>{greeting}</h3>
       <h1>About</h1>
-      
-      <ItemList products={products} />
+      <h1>ItemDetail</h1>
+      <ItemList productos={products} />
     </div>
   );
 };

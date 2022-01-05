@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import getOneProduct from "../../services/getOneProduct";
-import ItemDetail from "../ItemDetail/ItemDetail";
+import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = () => {
   const [item, setItem] = useState([]);
@@ -12,7 +12,7 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
-      <h1>ACA VA EL ITEMDETAILCONTAINER</h1>
+      <h1>ITEMDETAILCONTAINER</h1>
       <ItemDetail item={item} />
     </div>
   );
