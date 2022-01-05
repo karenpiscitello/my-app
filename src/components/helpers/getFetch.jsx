@@ -8,6 +8,6 @@ const productos = [
 export const getFetch = new Promise((resolve)=>{
     setTimeout(() => {
         resolve(productos)
-    },3000)
+    },3000);
     
-}) 
+}) ;

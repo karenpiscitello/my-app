@@ -14,7 +14,7 @@ const ItemCount = ({inicial}) => {
             <button onClick= {reset} >Reset</button>
             <button onClick= {carrito} >Agregar al Carrito</button>
         </div>
-    )
-}
+    );
+};
 
 export default ItemCount
