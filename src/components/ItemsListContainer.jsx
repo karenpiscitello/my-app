@@ -21,7 +21,7 @@ const ItemListContainer = ({ greeting }) => {
       <h1>About</h1>
       <ItemCount inicial = {1} max = {5}/>
       <h1>ItemDetail</h1>
-      <ItemList productos={products} />
+      <ItemList products={products} />
     </div>
   );
 };
