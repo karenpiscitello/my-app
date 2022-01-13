@@ -55,17 +55,17 @@
     },
     {
         "id":7,
-        "image":"https://http2.mlstatic.com/D_NQ_NP_963530-MLA46418767025_062021-O.jpg",
-        "title":"RTX 3070",
+        "image":"https://res.cloudinary.com/karenp/image/upload/v1641391344/productos/reme3_xxn7za.png",
+        "title":"Remera",
         "descripcion": "este es el séptimo producto",
-        "categoria":"Placas-de-video",
+        "categoria":"Remeras",
         "price": "200000",
         "stock": "3"
     },
     {
         "id":8,
-        "image":"https://s3-sa-east-1.amazonaws.com/peluffo/39b42091-a487-4a90-9628-15868cb7a18d.jpg",
-        "title":"Teclado Generico",
+        "image":"https://res.cloudinary.com/karenp/image/upload/v1641391344/productos/reme3_xxn7za.png",
+        "title":"Buzo",
         "descripcion": "este es el octavo producto",
         "categoria":"perifericos",
         "price": "2000",
