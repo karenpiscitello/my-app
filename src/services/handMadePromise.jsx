@@ -76,7 +76,7 @@ const data = [
         image:"https://res.cloudinary.com/karenp/image/upload/c_scale,w_595/v1642121476/productos/WhatsApp_Image_2021-12-28_at_5.25.23_PM_mwbwlb.jpg",
         title:"Remera chapu",
         descripcion: "este es el noveno producto",
-        categoria:"remeras",
+        categoria:"Remeras",
         price: "2000",
         stock: "4",
     },

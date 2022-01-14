@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom'
+
 import Content from "./Content";
 //import { Navbar, Container, NavDropdown, Nav } from "react-bootstrap";
 import Navbar from 'react-bootstrap/Navbar'
@@ -11,7 +13,7 @@ const NavBar = () => {
         <div>
             <Navbar bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand>
                         LateralMood
                         {/* <img
                         src="/logo.svg"
@@ -24,17 +26,18 @@ const NavBar = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="#home">Inicio</Nav.Link>
-                            <Nav.Link href="#link">Contacto</Nav.Link>
+                            <Link to="/">Inicio</Link>
+                            <Link to="/detalle">Contacto</Link>
                             <NavDropdown title="Diseño" id="basic-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">Remeras</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">Buzos</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">Accesorios</NavDropdown.Item>
+                                <NavDropdown.Item><Link to="/categoria/Remeras">Remeras</Link></NavDropdown.Item>
+                                <NavDropdown.Item><Link to="/categoria/Buzos">Buzos</Link></NavDropdown.Item>
+                                <NavDropdown.Item><Link to="/categoria/accesorios">Accesorios</Link></NavDropdown.Item>
                             </NavDropdown>
                             
                         </Nav>
                     </Navbar.Collapse>
                     <CardWidget/>
+                    <Link to="/cart">Carrito</Link>
                 </Container>
             </Navbar>
             <Content />

@@ -1,3 +1,4 @@
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import './App.css'
 import NavBar from './components/NavBar/NavBar';
@@ -7,13 +8,31 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-    <div className="App">
-      <header>
+    <BrowserRouter>
+      <div className="App">
+        <header>
         <NavBar />
-      </header>
-      <ItemsListContainer greeting="Indumentaria Personalizada"/>
-      <ItemDetailContainer/> 
+        </header>
+        <Routes>
+          <Route
+            exact
+            path="/" 
+            element= {<ItemsListContainer greeting="Indumentaria Personalizada"/>}
+          />
+          <Route
+            exact 
+            path="/categoria/:idCategoria" 
+            element= {<ItemsListContainer greeting="Indumentaria Personalizada"/>}
+          />
+          <Route 
+            exact
+            path="/detalle" 
+            element= {<ItemDetailContainer/> }
+          />
+          
+        </Routes>
     </div>
+    </BrowserRouter>
   );
 }
 
