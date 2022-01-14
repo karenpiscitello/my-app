@@ -6,6 +6,8 @@ const ItemDetail = ({ item }) => {
       <h3>{item.title}</h3>
       <p>{item.description}</p>
       <img src={`${item.image}`} alt={`${item.image}`}></img>
+      <h3>Precio: {item.price}</h3>
+      <p>Cantidad:{item.stock}</p>
     </div>
   );
 };

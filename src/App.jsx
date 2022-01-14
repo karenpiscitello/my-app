@@ -6,16 +6,13 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-
   return (
     <div className="App">
       <header>
         <NavBar />
       </header>
-      
       <ItemsListContainer greeting="Indumentaria Personalizada"/>
-      <ItemDetailContainer/>
-      
+      <ItemDetailContainer/> 
     </div>
   );
 }

@@ -19,8 +19,8 @@ const ItemListContainer = ({ greeting }) => {
     <div className="container col-12 bg-warning">
       <h3>{greeting}</h3>
       <h1>About</h1>
-      <ItemCount inicial = {1} max = {5}/>
       <h1>ItemDetail</h1>
+      <ItemCount inicial = {1} max = {5}/>
       <ItemList products={products} />
     </div>
   );
