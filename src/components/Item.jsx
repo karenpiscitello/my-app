@@ -1,5 +1,7 @@
-import React from "react"
-const Item = ({description, price, stock, title, image}) => {
+import { Link } from 'react-router-dom'
+
+
+const Item = ({description, price, stock, title, image, id}) => {
     return (
         <div className="flex bg-info">
         <h3>{title}</h3>
@@ -7,6 +9,10 @@ const Item = ({description, price, stock, title, image}) => {
         <p>{description}</p>
         <h3>{stock}</h3>
         <img src={`${image}`} alt={`${image}`}></img>
+        <Link to={`/detalle/${id}`}>
+        <button>detalle del producto</button>
+        </Link>
+        
     </div>
 
     );
