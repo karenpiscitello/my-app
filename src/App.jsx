@@ -5,34 +5,42 @@ import NavBar from './components/NavBar/NavBar';
 import ItemsListContainer from './components/ItemsListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import "bootstrap/dist/css/bootstrap.min.css";
+import CartContextProvider from './context/CartContext';
+
 
 function App() {
+  
   return (
-    <BrowserRouter>
-      <div className="App">
-        <header>
-        <NavBar />
-        </header>
-        <Routes>
-          <Route
-            exact
-            path="/" 
-            element= {<ItemsListContainer greeting="Indumentaria Personalizada"/>}
-          />
-          <Route
-            exact 
-            path="/categoria/:idCategoria" 
-            element= {<ItemsListContainer greeting="Indumentaria Personalizada"/>}
-          />
-          <Route 
-            exact
-            path="/detalle" 
-            element= {<ItemDetailContainer/> }
-          />
-          
-        </Routes>
-    </div>
-    </BrowserRouter>
+    <CartContextProvider>
+      <BrowserRouter>
+            <div className="App">
+              <header>
+              <NavBar />
+              </header>
+              <Routes>
+                <Route
+                  exact
+                  path="/" 
+                  element= {<ItemsListContainer greeting="Indumentaria Personalizada"/>}
+                />
+                <Route
+                  exact 
+                  path="/categoria/:idCategoria" 
+                  element= {<ItemsListContainer greeting="Indumentaria Personalizada"/>}
+                />
+                <Route 
+                  exact
+                  path="/detalle/:id" 
+                  element= {<ItemDetailContainer/> }
+                />
+                
+              </Routes>
+          </div>
+          </BrowserRouter>
+    </CartContextProvider>
+    
+      
+    
   );
 }
 

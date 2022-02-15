@@ -1,14 +1,45 @@
-const ItemDetail = ({ item }) => {
-  console.log("El item", item);
+import { useState} from "react";
+import ItemCount from "./ItemCount";
+import { Col, Row } from "react-bootstrap"
+import { useCartContext } from "../context/CartContext";
+
+
+function ItemDetail({prod}) {
+  const [count, setCount] = useState(0)
+
+  const {cartList ,agregarAlCarrito}= useCartContext()
+
+  function onAdd (cant){
+      console.log(cant)
+      agregarAlCarrito( {...prod, cantidad:cant} ) 
+  }
+  
+  console.log(cartList);
   return (
-    <div className="flex bg-danger">
-      <h3>ItemDetail</h3>
-      <h3>{item.title}</h3>
-      <p>{item.description}</p>
-      <img src={`${item.image}`} alt={`${item.image}`}></img>
-      <h3>Precio: {item.price}</h3>
-      <p>Cantidad:{item.stock}</p>
-    </div>
-  );
-};
-export default ItemDetail;
+      <Row >
+          <label>Soy el detalle</label>
+          <Col>                
+              <div className='card w-50'>
+                  <div className="container">
+                      <label>{prod.title}</label>
+                  </div>
+                  <div className="container">
+                      <img  src={prod.image} className="w-25" alt="foto" />
+                      <br/>
+                      <label>{prod.descripcion}</label><br/>
+                      <label>{prod.categoria}</label>
+                  </div>
+                  <div className="container">
+                      <label>{prod.price}</label>
+                  </div>
+              </div>
+          </Col>
+          <Col>                
+              <ItemCount onAdd={onAdd} stock={10}/>      
+          </Col>                           
+      </Row>
+
+  )
+}
+
+export default ItemDetail

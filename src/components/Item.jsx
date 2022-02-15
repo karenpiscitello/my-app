@@ -1,21 +1,32 @@
 import { Link } from 'react-router-dom'
 
 
-const Item = ({description, price, stock, title, image, id}) => {
+function Item({prod}) {
+    //console.log('item est')
     return (
-        <div className="flex bg-info">
-        <h3>{title}</h3>
-        <h2>{price}</h2>
-        <p>{description}</p>
-        <h3>{stock}</h3>
-        <img src={`${image}`} alt={`${image}`}></img>
-        <Link to={`/detalle/${id}`}>
-        <button>detalle del producto</button>
-        </Link>
-        
-    </div>
+        <div 
+            key={prod.id}
+            className='col-md-4'
+        >                        
+            <div className="card w-100 mt-5" >
+                <div className="card-header">
+                    {`${prod.title} - ${prod.category}`}
+                </div>
+                <div className="card-body">
+                    <img src={prod.image} alt='' className='w-50' />
+                    {prod.price}                                                            
+                </div>
+                <div className="card-footer">  
+                <Link to={`/detalle/${prod.id}`}>
+                    <button className="btn btn-outline-primary btn-block">
+                        detalle del producto
+                    </button>
+                </Link>                                                      
+                                                                                
+                </div>
+            </div>
+        </div>
+    )
+}
 
-    );
-};
-
-export default Item;
+export default Item

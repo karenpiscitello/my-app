@@ -67,7 +67,7 @@ const data = [
         image:"https://res.cloudinary.com/karenp/image/upload/c_scale,w_540/v1642121476/productos/WhatsApp_Image_2021-12-28_at_5.25.21_PM_lhut70.jpg",
         title:"Remera Princeso",
         descripcion: "este es el octavo producto",
-    categoria:"Remeras",
+        categoria:"Remeras",
         price: "2000",
         stock: "4",
     },
