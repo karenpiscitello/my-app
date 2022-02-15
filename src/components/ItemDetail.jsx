@@ -14,10 +14,10 @@ function ItemDetail({prod}) {
       agregarAlCarrito( {...prod, cantidad:cant} ) 
   }
   
-  console.log(cartList);
+ // console.log(cartList);
   return (
       <Row >
-          <label>Soy el detalle</label>
+          <label>detalle producto</label>
           <Col>                
               <div className='card w-50'>
                   <div className="container">
@@ -26,8 +26,8 @@ function ItemDetail({prod}) {
                   <div className="container">
                       <img  src={prod.image} className="w-25" alt="foto" />
                       <br/>
-                      <label>{prod.descripcion}</label><br/>
-                      <label>{prod.categoria}</label>
+                      <label>{prod.description}</label><br/>
+                      <label>{prod.category}</label>
                   </div>
                   <div className="container">
                       <label>{prod.price}</label>

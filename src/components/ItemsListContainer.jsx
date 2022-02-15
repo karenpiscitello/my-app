@@ -11,18 +11,7 @@ const ItemListContainer = ({ greeting }) => {
   //console.log(products);
   const { idCategoria } = useParams()
 
-  // useEffect(() => {
-  //   if (idCategoria){
-  //     getProducts
-  //     .then((res) => setProducts(res.filter(prod => prod.categoria === idCategoria)))
-  //     .catch((err) => alert("Ha ocurrido un error", err));
-  //   }else {
-  //   getProducts
-  //     .then((res) => setProducts(res))
-  //     .catch((err) => alert("Ha ocurrido un error", err));
-  //   }
-  // },[idCategoria]);
-  // console.log(idCategoria)
+
 
   useEffect(() => {
     const db = getFirestore()
@@ -36,8 +25,8 @@ const ItemListContainer = ({ greeting }) => {
 }, []) 
 
   return (
-    <div className="container col-12 bg-warning">
-      <h3>{greeting}</h3>
+    <div>
+      {greeting}
 
       
       <ItemList products={products} />

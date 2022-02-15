@@ -20,7 +20,10 @@ function agregarAlCarrito (item){
             setCartList([...cartList, item ])
         }
     }
-
+    const precioTotal =()=>{
+        return cartList.reduce((acum, prod) => acum + (prod.cantidad * prod.price) , 0)
+    }
+    
     function borrarCarrito(){
         setCartList([])
     }
@@ -29,7 +32,8 @@ function agregarAlCarrito (item){
         <CartContext.Provider value={{
             cartList,
             agregarAlCarrito,
-            borrarCarrito
+            borrarCarrito,
+            precioTotal
         }}>
             {children}
         </CartContext.Provider>

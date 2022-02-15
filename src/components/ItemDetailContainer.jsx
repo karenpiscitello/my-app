@@ -8,17 +8,20 @@ const ItemDetailContainer = () => {
 
   const { idCategoria } = useParams()
   const [loading, setLoading] = useState(true)
-  const [item, setItem] = useState([]);
+  const [prod, setProd] = useState([]);
   //console.log("item", item);
 
-  useEffect(() => {
-    /*getOneProduct.then((res) => setItem(res)).catch((err) => console.log(err));*/
-    getProducts
-            .then(resp => setItem(resp.find(prod => prod.id === parseInt(idCategoria)))) 
-            .catch(err => console.log(err))
-            .finally(()=>setLoading(false))
-    
-  },[idCategoria]);
+  useEffect(() => {        
+
+        const db = getFirestore()
+        const queryDb = doc(db, 'items', id)
+        getDoc(queryDb)
+        .then(resp => setProd( { id: resp.id, ...resp.data() } ))
+        .catch(err => console.log(err))
+        .finally(()=>setLoading(false))
+        
+},[]) 
+
 
   return (
     <>

@@ -4,7 +4,7 @@ import { useCartContext } from "../context/CartContext"
 
 function Cart() {
 
-    const { cartList, borrarCarrito } = useCartContext()
+    const { cartList, borrarCarrito,precioTotal } = useCartContext()
     return (
     <div>
         { cartList.map(prod => <li>{prod.title}{prod.cantidad}</li>)}

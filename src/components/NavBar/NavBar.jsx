@@ -31,7 +31,6 @@ const NavBar = () => {
                             <NavDropdown title="Diseño" id="basic-nav-dropdown">
                                 <NavDropdown.Item><Link to="/categoria/Remeras">Remeras</Link></NavDropdown.Item>
                                 <NavDropdown.Item><Link to="/categoria/Buzos">Buzos</Link></NavDropdown.Item>
-                                <NavDropdown.Item><Link to="/categoria/accesorios">Accesorios</Link></NavDropdown.Item>
                             </NavDropdown>
                             
                         </Nav>
