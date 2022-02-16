@@ -8,6 +8,7 @@ import { collection, doc, getDoc, getFirestore, getDocs, query, where, limit } f
 
 const ItemListContainer = ({ greeting }) => {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true)
   //console.log(products);
   const { idCategoria } = useParams()
 
