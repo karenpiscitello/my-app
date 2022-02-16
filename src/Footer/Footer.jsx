@@ -10,13 +10,13 @@ function Footer() {
         <div className="row">
             <div className="col-lg-12 d-flex flex-row justify-content-center mt-2">
             <div className="redes">
-            <a href='https://www.instagram.com/lateralmood/'>
+            <a href='https://www.instagram.com/lateralmood/'target="_blank">
                 <AiOutlineInstagram />
                 </a>
             </div>
             <div className="redes">
             
-            <a href='https://api.whatsapp.com/message/OIUSMCH7YZUKM1?autoload=1&app_absent=0'>
+            <a href='https://api.whatsapp.com/message/OIUSMCH7YZUKM1?autoload=1&app_absent=0'target="_blank">
                 <FaWhatsapp />
             </a>
             </div>
