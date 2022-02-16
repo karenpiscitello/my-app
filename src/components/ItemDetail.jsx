@@ -21,7 +21,7 @@ function ItemDetail({prod}) {
             <Col>                
                 <div className='card w-50'>
                     <div className="container">
-                        <label>{prod.title}</label>
+                        <label>{prod.name}</label>
                     </div>
                     <div className="container">
                         <img  src={prod.image} className="w-25" alt="imagen" />

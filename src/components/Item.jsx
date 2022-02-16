@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 
 function Item({prod}) {
-    //console.log('item est')
+    console.log('item')
     return (
         <div 
             key={prod.id}
@@ -10,7 +10,7 @@ function Item({prod}) {
         >                        
             <div className="card w-100 mt-5" >
                 <div className="card-header">
-                    {`${prod.title} - ${prod.category}`}
+                    {`${prod.name} - ${prod.category}`}
                 </div>
                 <div className="card-body">
                     <img src={prod.image} alt='' className='w-50' />
