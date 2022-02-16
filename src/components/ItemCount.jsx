@@ -1,7 +1,7 @@
 import React from "react"
 import { useCounter } from "./useCounter"
 
-const ItemCount = ({inicial, onAdd}) => {
+const ItemCount = ({inicial}) => {
 
     const {counter,increment,decrement, reset, carrito } = useCounter(inicial)
 

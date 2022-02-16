@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 
 function Item({item}) {
-    console.log(item)
+    //console.log(item)
     return (
         <div 
             key={item.id}
