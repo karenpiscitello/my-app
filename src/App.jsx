@@ -7,6 +7,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import "bootstrap/dist/css/bootstrap.min.css";
 import CartContextProvider from './context/CartContext';
 import Cart from './components/Cart';
+import Contacto from './components/Contacto';
 
 function App() {
   
@@ -15,8 +16,10 @@ function App() {
       <BrowserRouter>
             <div className="App">
               <header>
-              <NavBar />
+                
+                <NavBar />
               </header>
+              
               <Routes>
                 <Route
                   exact
@@ -25,7 +28,7 @@ function App() {
                 />
                 <Route
                   exact 
-                  path="/categoria/:idCategoria" 
+                  path="/categoria/:id" 
                   element= {<ItemsListContainer greeting="Indumentaria Personalizada"/>}
                 />
                 <Route 
@@ -33,6 +36,11 @@ function App() {
                   path="/detalle/:id" 
                   element= {<ItemDetailContainer/> }
                 />
+                <Route 
+                            exact
+                            path="/contacto" 
+                            element={ <Contacto />} 
+                /> 
                 <Route 
                             exact
                             path="/cart" 
@@ -43,7 +51,7 @@ function App() {
           </BrowserRouter>
     </CartContextProvider>
     
-      
+
     
   );
 }
