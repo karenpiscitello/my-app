@@ -18,7 +18,7 @@ const ItemListContainer = ({ greeting }) => {
     const queryCollection = query(
         collection(db, 'items')
     )
-    getDoc(queryCollection)
+    getDocs(queryCollection)
     .then(resp => setProducts( resp.docs.map(prod => ({ id: prod.id, ...prod.data() }) ) ) )
     .catch(err => console.log(err))
     .finally(()=> setLoading(false))
