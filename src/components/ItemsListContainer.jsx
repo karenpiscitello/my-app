@@ -6,7 +6,7 @@ import { collection, doc, getDoc, getFirestore, getDocs, query, where, limit } f
 
 
 
-const ItemListContainer = ({ greeting }) => {
+function ItemListContainer ({ greeting }) {
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true)
   
@@ -20,10 +20,10 @@ const ItemListContainer = ({ greeting }) => {
         collection(db, 'items')
     )
     getDocs(queryCollection)
-    .then(resp => setProducts( resp.docs.map(prod => ({ id: prod.id, ...prod.data() }) ) ) )
+    .then(resp => setProductos( resp.docs.map(prod => ({ id: prod.id, ...prod.data() }) ) ) )
     .catch(err => console.log(err))
     .finally(()=> setLoading(false))
-}, []) 
+  }, []) 
 
   return (
     <div>
