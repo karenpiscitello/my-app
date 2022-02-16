@@ -2,11 +2,12 @@ import { useParams } from "react-router-dom";
 
 import { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
-import getProducts from "../services/handMadePromise";
+import { collection, doc, getDoc, getFirestore } from 'firebase/firestore'
+//import getProducts from "../services/handMadePromise";
 
 const ItemDetailContainer = () => {
 
-  const { idCategoria } = useParams()
+  const { id } = useParams()
   const [loading, setLoading] = useState(true)
   const [prod, setProd] = useState([]);
   //console.log("item", item);

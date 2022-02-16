@@ -7,9 +7,9 @@ import { collection, doc, getDoc, getFirestore, getDocs, query, where, limit } f
 
 
 const ItemListContainer = ({ greeting }) => {
-  const [products, setProducts] = useState([]);
+  const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true)
-  //console.log(products);
+  
   const { idCategoria } = useParams()
 
 
@@ -29,8 +29,13 @@ const ItemListContainer = ({ greeting }) => {
     <div>
       {greeting}
 
+      { loading ?
+
+      <h2>Cargando...</h2>
+      :
+      <ItemList productos={productos} />
+      }
       
-      <ItemList products={products} />
     </div>
   );
 };

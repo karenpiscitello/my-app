@@ -3,10 +3,10 @@ import Item from './Item'
 
 
 const ItemList = memo(
-    ({ products }) => {
+    ({ productos }) => {
         return (
             <>
-            {products.map((prod) => <Item item = {prod} />)}   
+            {productos.map((prod) => <Item item = {prod} />)}   
             </>
         )
     }
