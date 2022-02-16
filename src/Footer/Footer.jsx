@@ -1,6 +1,6 @@
 import React from 'react'
 import { AiOutlineInstagram } from 'react-icons/ai';
-import { FaFacebookF } from 'react-icons/fa';
+import { FaWhatsapp } from 'react-icons/fa';
 import './Footer.css'
 
 
@@ -15,7 +15,10 @@ function Footer() {
                 </a>
             </div>
             <div className="redes">
-                <FaFacebookF />
+            
+            <a href='https://api.whatsapp.com/message/OIUSMCH7YZUKM1?autoload=1&app_absent=0'>
+                <FaWhatsapp />
+            </a>
             </div>
             </div>
             <div className="col-lg-12 d-flex flex-row justify-content-center mt-4">
