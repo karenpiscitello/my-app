@@ -7,7 +7,7 @@ const ItemList = memo(
         //console.log(productos)
         return (
             <>
-            {productos.map((prod) => <Item item = {prod} />)} 
+            {productos.map((item) => <Item item = {item} />)} 
             </>
         
         )

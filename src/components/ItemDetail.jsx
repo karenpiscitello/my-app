@@ -19,12 +19,12 @@ function ItemDetail({prod}) {
         <Row >
             <label>detalle producto</label>
             <Col>                
-                <div className='card w-50'>
+                <div className='card w-70'>
                     <div className="container">
                         <label>{prod.name}</label>
                     </div>
                     <div className="container">
-                        <img  src={prod.image} className="w-25" alt="imagen" />
+                        <img  src={prod.image} className="w-20" alt="imagen" />
                         <br/>
                         <label>{prod.description}</label><br/>
                         <label>{prod.category}</label>
