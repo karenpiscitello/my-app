@@ -7,7 +7,7 @@ import Container from 'react-bootstrap/Container'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import Nav from 'react-bootstrap/Nav'
 import CardWidget from "./CardWidget";
-import BootCarousel from './BootCarousel';
+
 
 
 
@@ -44,7 +44,7 @@ const NavBar = () => {
                 </Container>
             </Navbar>
             <Content />
-            <BootCarousel/>
+            
         </div>
     );
 };

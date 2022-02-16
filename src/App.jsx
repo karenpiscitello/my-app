@@ -8,6 +8,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import CartContextProvider from './context/CartContext';
 import Cart from './components/Cart';
 import Contacto from './components/Contacto';
+import BootCarousel from './components/NavBar/BootCarousel';
+import Footer from './Footer/Footer';
 
 function App() {
   
@@ -16,10 +18,9 @@ function App() {
       <BrowserRouter>
             <div className="App">
               <header>
-                
                 <NavBar />
               </header>
-              
+              <BootCarousel/>
               <Routes>
                 <Route
                   exact
@@ -47,6 +48,7 @@ function App() {
                             element={ <Cart />} 
                 /> 
               </Routes>
+              <Footer/>
           </div>
           </BrowserRouter>
     </CartContextProvider>
