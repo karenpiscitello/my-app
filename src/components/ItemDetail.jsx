@@ -14,7 +14,7 @@ function ItemDetail({prod}) {
         agregarAlCarrito( {...prod, cantidad:cant} ) 
     }
     
-    console.log(cartList);
+    //console.log(cartList);
     return (
         <Row >
             <label>detalle producto</label>

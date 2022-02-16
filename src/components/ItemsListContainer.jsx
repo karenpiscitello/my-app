@@ -24,7 +24,7 @@ function ItemListContainer ({ greeting }) {
     .catch(err => console.log(err))
     .finally(()=> setLoading(false))
   }, []) 
-
+  console.log(productos)
   return (
     <div>
       {greeting}
