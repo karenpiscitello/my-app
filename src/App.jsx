@@ -45,7 +45,7 @@ function App() {
                 <Route 
                             exact
                             path="/cart" 
-                            element={ <Cart />} 
+                            element={ <Cart/>} 
                 /> 
               </Routes>
               <Footer/>
