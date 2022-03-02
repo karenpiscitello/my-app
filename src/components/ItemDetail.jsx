@@ -2,8 +2,8 @@ import {useState} from 'react'
 
 import ItemCount from './ItemCount';
 import { Col, Row } from "react-bootstrap";
-import { useCartContext } from '../context/cartContext';
-
+import { useCartContext } from '../context/CartContext';
+import {Link} from 'react-router-dom'
 
 
 function ItemDetail({prod}) {
@@ -39,11 +39,16 @@ function ItemDetail({prod}) {
                 </div>
             </Col>
             <Col>                
-                <ItemCount onAdd={onAdd} stock={10}/>      
-            </Col>                           
+                <ItemCount onAdd={onAdd} stock={10}/>  
+                <Link to={'/'}>
+                <button className="btn-agregar d-block">
+                    Volver al catalogo
+                </button>
+                </Link>    
+            </Col>                          
         </Row>
 
-       
+    
     )
 }
 

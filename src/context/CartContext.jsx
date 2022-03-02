@@ -1,5 +1,4 @@
-import { createContext, useState, useContext } from 'react'
-
+import { createContext, useState, useContext } from "react";
 
 const CartContext = createContext([]) 
 
@@ -17,7 +16,7 @@ function CartContextProvider({children}) {
 
     function agregarAlCarrito(item) {       
 
-        const index = cartList.findIndex(i => i.id === item.id)//pos    -1
+        const index = cartList.findIndex(i => i.id === item.id)
   
           if (index > -1) {
             const oldQy = cartList[index].cantidad
