@@ -1,21 +1,53 @@
-import React from "react"
-import { useCounter } from "./useCounter"
+import { useState } from 'react'
 
-const ItemCount = ({inicial}) => {
 
-    const {counter,increment,decrement, reset, carrito } = useCounter(inicial)
+function ItemCount({stock = 1, onAdd}) {
 
-    return(
-        <div>
-            <h3>Cant. de Productos</h3>
-            <h4>{counter}</h4>
-            <button onClick= {increment} >+</button>
-            <button onClick= {decrement} >-</button>
-            <button onClick= {reset} >Reset</button>
-            <button onClick= {carrito} disabled={counter===0} >Agregar al Carrito</button>
+    console.log("ItemCount")
+   
+    
+    const [count, setCount] = useState(1)
 
+
+    function sumar() {
+
+        console.log("Sumar")
+        if (count < stock) {
+            setCount(count + 1)  
+        }
+        // props.onAdd(count)
+        console.log(count)
+        
+    }
+
+    function restar() {
+
+        if (count > 1) {
+            setCount(count - 1)
+        }
+    }
+
+    function handleClik() {
+        onAdd(count)
+    }
+
+    return (
+        <div className="h6 qtyBox d-flex align-items-center justify-content-around border w-75">
+            <button onClick={restar}>
+                -
+            </button>
+            <div >
+                {count}
+                {/* {props.count} */}
+            </div>       
+            <button  onClick={sumar}>
+                +
+            </button><br/>
+
+            
+            <button onClick={handleClik}>Agregar Carrito</button>
         </div>
-    );
-};
+    )
+}
 
 export default ItemCount

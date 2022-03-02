@@ -24,7 +24,7 @@ function Footer() {
             <div className="col-lg-12 d-flex flex-row justify-content-center mt-4">
             <div className="info">
                 <h6 className="text-center">
-                Córdoba,Argentina - Atención de Lunes a Viernes de 10:00
+                Córdoba, Argentina - Atención de Lunes a Viernes de 10:00
                 a 18:00hs y Sábados de 9:00 a 14:00hs.
                 </h6>
             </div>

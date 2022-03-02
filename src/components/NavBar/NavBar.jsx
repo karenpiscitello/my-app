@@ -31,10 +31,10 @@ const NavBar = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <Link to="/">Inicio</Link>
-                            <Link to="/detalle">Contacto</Link>
+                            <Link to="/contacto">Contacto</Link>
                             <NavDropdown title="Diseño" id="basic-nav-dropdown">
-                                <NavDropdown.Item><Link to="/categoria/Remeras">Remeras</Link></NavDropdown.Item>
-                                <NavDropdown.Item><Link to="/categoria/Buzos">Buzos</Link></NavDropdown.Item>
+                                <NavDropdown.Item><Link to="/categoria/remeras">Remeras</Link></NavDropdown.Item>
+                                <NavDropdown.Item><Link to="/categoria/buzos">Buzos</Link></NavDropdown.Item>
                             </NavDropdown>
                             
                         </Nav>

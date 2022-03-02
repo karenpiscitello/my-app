@@ -1,20 +1,15 @@
 import { memo } from 'react'
 import Item from './Item'
 
-
 const ItemList = memo(
-    ({ productos }) => {
-        //console.log(productos)
+    ({ productos })=> {
+        console.log('itemList')
         return (
             <>
-            {productos.map((item) => <Item item = {item} />)} 
+                { productos.map((prod) => <Item prod= {prod} />)  }
             </>
-        
         )
-        
     }
-    
-    
-    )
+, (oldProps, newProps)=> oldProps.productos.length === newProps.productos.length ) 
 
-export default ItemList;
+export default ItemList

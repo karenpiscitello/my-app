@@ -29,7 +29,7 @@ function App() {
                 />
                 <Route
                   exact 
-                  path="/categoria/:id" 
+                  path="/categoria/:idCate" 
                   element= {<ItemsListContainer greeting="Indumentaria Personalizada"/>}
                 />
                 <Route 
@@ -52,9 +52,7 @@ function App() {
           </div>
           </BrowserRouter>
     </CartContextProvider>
-    
-
-    
+      
   );
 }
 
