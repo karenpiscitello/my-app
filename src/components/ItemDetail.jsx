@@ -21,7 +21,7 @@ function ItemDetail({prod}) {
     return (
         
         <Row >
-            <label>Soy el detalle</label>
+            <label>Detalle de la Prenda</label>
             <Col>                
                 <div className='card w-50'>
                     <div className="container">

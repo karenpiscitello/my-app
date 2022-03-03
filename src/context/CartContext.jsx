@@ -8,12 +8,6 @@ export const useCartContext = () => useContext(CartContext)
 function CartContextProvider({children}) {
     const [cartList, setCartList] = useState([])
 
-    // function agregarAlCarrito(item) {
-    //     setCartList( [...cartList, item] )    
-    // }
-
-
-
     function agregarAlCarrito(item) {       
 
         const index = cartList.findIndex(i => i.id === item.id)

@@ -3,25 +3,18 @@ import { useState } from 'react'
 
 function ItemCount({stock = 1, onAdd}) {
 
-    console.log("ItemCount")
-   
-    
     const [count, setCount] = useState(1)
 
 
     function sumar() {
-
         console.log("Sumar")
         if (count < stock) {
             setCount(count + 1)  
         }
-        // props.onAdd(count)
-        console.log(count)
-        
+        console.log(count)  
     }
 
     function restar() {
-
         if (count > 1) {
             setCount(count - 1)
         }
